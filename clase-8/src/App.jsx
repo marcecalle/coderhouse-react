@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import CalculadorComponente from './components/CalculadorComponente';
+import CalculadorComponente from './components/CalculadorComponenete';
 import PadreComponente from './components/PadreComponente';
 
 function App() {

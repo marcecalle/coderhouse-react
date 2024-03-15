@@ -4,6 +4,7 @@ import TaskList from './components/TaskList';
 import ProductList from './components/ProductList';
 
 function App() {
+  
   const tasks = [
     {
       id: 1,
@@ -23,7 +24,8 @@ function App() {
     },
   ];
 
-  const tareas = new Promise((resolve, reject) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const tareas = new Promise((resolve, /*reject*/) => {
     setTimeout(() => {
       resolve(tasks);
     }, 3000);
@@ -35,7 +37,7 @@ function App() {
     tareas
       .then((data) => setAllTasks(data))
       .catch((error) => console.log('Error: ' + error));
-  }, []);
+  }, [tareas]);
 
   return (
     <>
